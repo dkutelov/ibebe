@@ -1,24 +1,16 @@
 import React from 'react'
-import Link from 'next/link'
-import { AppBar, Grid, withStyles } from '@material-ui/core'
-import NavBar from '../navbar'
+import { Grid, withStyles } from '@material-ui/core'
 
-const Header = ({ classes }) => {
+const Footer = ({ classes }) => {
 	return (
-		<AppBar style={{ backgroundColor: '#fff' }}>
+		<footer>
 			<Grid container className={classes.wrapper}>
 				<Grid item xs={12}>
-					<Link href="/">
-						<a>
-							<img src="./static/images/logo.png" alt="logo" className={classes.logo} />
-						</a>
-					</Link>
+					<span>Copyright 2009 iBebe.com. All rights reserved.</span>
 				</Grid>
 			</Grid>
-			{/* <div className={classes.navTopBorder} /> */}
-			<NavBar />
-			<div className={classes.headerBottomBorder} />
-		</AppBar>
+			<div className={classes.footerBottomBorder} />
+		</footer>
 	)
 }
 
@@ -42,12 +34,6 @@ const styles = (theme) => ({
 			margin : '0 auto'
 		}
 	},
-	navTopBorder       : {
-		width        : '100%',
-		height       : '10px',
-		boxShadow    : '0 -3px 12px -2px rgba(51, 51, 51, .1) inset',
-		borderBottom : '1px solid #e1e1e1'
-	},
 	headerBottomBorder : {
 		width           : '100 %',
 		height          : '6px',
@@ -57,4 +43,4 @@ const styles = (theme) => ({
 	}
 })
 
-export default withStyles(styles)(Header)
+export default withStyles(styles)(Footer)

@@ -5,8 +5,9 @@ import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import JssProvider from 'react-jss/lib/JssProvider'
 import getPageContext from '../src/getPageContext'
-import Header from '../src/components/header'
 
+import Header from '../src/components/header'
+import Footer from '../src/components/footer'
 class MyApp extends App {
 	constructor () {
 		super()
@@ -41,6 +42,7 @@ class MyApp extends App {
                 to render collected styles on server-side. */}
 						<Header />
 						<Component pageContext={this.pageContext} {...pageProps} />
+						<Footer />
 					</MuiThemeProvider>
 				</JssProvider>
 			</Container>

@@ -6,32 +6,22 @@ import flush from 'styled-jsx/server';
 class MyDocument extends Document {
   render() {
     const { pageContext } = this.props;
-
     return (
       <html lang="en" dir="ltr">
         <Head>
           <meta charSet="utf-8" />
-          {/* Use minimum-scale=1 to enable GPU rasterization */}
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-          />
-          {/* PWA primary color */}
-          <meta
-            name="theme-color"
-            content={pageContext ? pageContext.theme.palette.primary.main : null}
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-          />
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+          <meta name="theme-color" content={pageContext ? pageContext.theme.palette.primary.main : null} />
+          <meta name="description" content="iBebe.bg предлага висококачествени стоки и аксесоари за бебето, детето и майката - бебешки храни, детски играчки, бебешки колички, столчета за хранене и кола и още много." />
+          <link rel="icon" href="./static/images/favicon.gif" type="image/x-icon" />
+		  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&amp;subset=cyrillic-ext" />
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }
 
