@@ -6,7 +6,7 @@ import ProductList from './ProductList'
 const Home = ({ classes }) => {
 	return (
 		<div className={classes.root}>
-			<Typography variant="h5" component="h1" style={{ marginTop: '1em' }}>
+			<Typography variant="h5" component="h1" style={{ marginTop: '1em', color: '#413852' }}>
 				Избрани продукти
 			</Typography>
 			<ProductList data={data} />

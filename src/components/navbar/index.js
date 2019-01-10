@@ -22,7 +22,7 @@ const NavBar = ({ classes }) => {
 					</ActiveLink>
 				</Button>
 				<Button className={classes.navbarButton}>
-					<ActiveLink href={`/buy`} applyColorChange={true}>
+					<ActiveLink href={`/wheretobuy`} applyColorChange={true}>
 						Къде да купя
 					</ActiveLink>
 				</Button>
