@@ -3,7 +3,16 @@ import Place from '@material-ui/icons/Place'
 
 const Marker = () => <Place color="secondary" fontSize="large" />
 const PartnerName = ({ name }) => (
-	<h2 style={{ color: '#762E61', marginTop: '-1.5em', width: '200px', transform: 'translateX(-50%)' }}>{name}</h2>
+	<h2
+		style={{
+			color: '#762E61',
+			marginTop: '-1.5em',
+			width: '200px',
+			transform: 'translateX(-50%)',
+			textAlign: 'center'
+		}}>
+		{name}
+	</h2>
 )
 
 const PartnerMap = ({ lat, lng, name }) => {
@@ -13,7 +22,7 @@ const PartnerMap = ({ lat, lng, name }) => {
 	]
 	const zoom = 15
 	return (
-		<div style={{ height: '300px', width: '30%' }}>
+		<div style={{ height: '300px', width: '100%' }}>
 			<GoogleMapReact
 				bootstrapURLKeys={{ key: 'AIzaSyAbBSz9ZdcjSHWP5g_2f6J3VnczJ1hz2ZY' }}
 				defaultCenter={center}

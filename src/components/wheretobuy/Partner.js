@@ -1,40 +1,86 @@
-import { Card, Typography, CardContent, CardMedia, withStyles } from '@material-ui/core'
+import { Card, Typography, CardContent, Button, CardActions, withStyles } from '@material-ui/core'
 import PartnerMap from './PartnerMap'
 
 const Partner = ({ partner, classes }) => {
 	return (
 		<Card className={classes.card}>
-			<div className={classes.details}>
-				<CardContent className={classes.content}>
-					<Typography component="h5" variant="h5">
-						{partner.name}
-					</Typography>
-					<Typography variant="subtitle1" color="textSecondary">
-						more text and link
-					</Typography>
-					<CardMedia className={classes.logo} image={partner.logoURL} title="Live from space album cover" />
-				</CardContent>
-			</div>
+			<CardContent className={classes.cardColumn}>
+				<div className={classes.logoContainer}>
+					<img className={classes.logo} src={partner.logoURL} alt={`Лого на ${partner.name}`} />
+				</div>
+			</CardContent>
+			<CardContent className={classes.cardColumn}>
+				<Typography component="h2" variant="h5" style={{ margin: '1em 0 0.5em 0' }}>
+					{partner.name}
+				</Typography>
+				<Typography variant="body1" color="textSecondary">
+					Адрес: {partner.address}
+				</Typography>
+				<Typography
+					component="h3"
+					variant="subtitle1"
+					color="textSecondary"
+					style={{ margin: '0.5em 0 0.25em 0', fontWeight: 'bold' }}>
+					За контакти:
+				</Typography>
+				<Typography variant="body2" color="textSecondary">
+					тел.: {partner.phones} <br />
+					Работно време: {partner.workingTime} <br />
+					Онлайн магазин: {partner.siteURL}
+				</Typography>
+				<CardActions>
+					<a href={partner.siteURL} className={classes.buyButtonContainer} target="_blank">
+						<Button size="small" variant="contained" color="primary" className={classes.buyButton}>
+							Пазарувай
+						</Button>
+					</a>
+				</CardActions>
+			</CardContent>
 			{/* check if coordinates exist */}
-			<PartnerMap lat={partner.position.lat} lng={partner.position.lng} name={`Магазин ${partner.name}`} />
+			<CardContent className={classes.cardColumn}>
+				<PartnerMap lat={partner.position.lat} lng={partner.position.lng} name={partner.name} />
+			</CardContent>
 		</Card>
 	)
 }
 
 const styles = (theme) => ({
-	card    : {
-		display        : 'flex',
-		justifyContent : 'space-between;'
+	card               : {
+		display                      : 'flex',
+		justifyContent               : 'space-between',
+		flexDirection                : 'column',
+		marginBottom                 : '1em',
+		[theme.breakpoints.up('md')]: {
+			flexDirection : 'row',
+			marginBottom  : '2em'
+		}
 	},
-	details : {
+	details            : {
 		display       : 'flex',
 		flexDirection : 'column'
 	},
-	content : {
-		flex : '1 0 auto'
+	cardColumn         : {
+		flex    : '1 0 30%',
+		padding : '0 !important'
 	},
-	logo    : {
-		width : '100px'
+	logoContainer      : {
+		display    : 'flex',
+		alignItems : 'center',
+		height     : '100%'
+	},
+	logo               : {
+		height   : '80px',
+		maxWidth : '100%',
+		padding  : '0 4em'
+	},
+	buyButtonContainer : {
+		textDecoration : 'none',
+		display        : 'block',
+		margin         : '0 auto',
+		paddingRight   : '2em'
+	},
+	buyButton          : {
+		margin : '1em 0'
 	}
 })
 
