@@ -4,63 +4,89 @@ import Zoom from 'react-reveal/Zoom'
 
 // mobile
 
-const Product = ({ product, classes, layoutAlignLeft }) => {
-	const imageBoxWidth = 7
-	const titleBoxWidth = 5
-	const imageBox = (width) => (
+const Product = ({ product, classes, layoutAlignLeft, width }) => (
+	<Grid container className={layoutAlignLeft ? classes.rootLeft : classes.rootRight}>
 		<Grid
 			item
-			xs={width}
+			xs={12}
+			md={width}
 			style={{ backgroundImage: `url(${product.imageURL})` }}
 			className={classes.productImage}
 		/>
-	)
-
-	const titleBox = (width) => (
-		<Grid item xs={width} style={{ alignSelf: 'center' }}>
+		<Grid item xs={12} md={12 - width} className={classes.productNameWrapper}>
 			<Zoom delay={300}>
-				<Typography variant="h5" component="h1" style={{ color: '#413852' }}>
+				<Typography variant="h5" component="h1" className={classes.productName}>
 					{product.name}
 				</Typography>
 				<img src={product.brand} className={classes.brandLogo} />
 				<Link href="./wheretobuy">
-					<a>
-						<Button variant="contained" color="primary" style={{ marginTop: '1em' }}>
+					<a style={{ textDecoration: 'none' }}>
+						<Button variant="contained" color="primary" className={classes.buyButton}>
 							Къде да купя
 						</Button>
 					</a>
 				</Link>
 			</Zoom>
 		</Grid>
-	)
+	</Grid>
+)
 
-	return (
-		<Grid container className={classes.root}>
-			{layoutAlignLeft ? imageBox(imageBoxWidth) : titleBox(titleBoxWidth)}
-			{layoutAlignLeft ? titleBox(titleBoxWidth) : imageBox(imageBoxWidth)}
-		</Grid>
-	)
+const rootBaseStyles = {
+	display    : 'flex',
+	width      : '100%',
+	height     : '450px',
+	margin     : '2em 0',
+	border     : '1px solid #e1e1e1',
+	boxShadow  : '0 2px 12px -2px rgba(51, 51, 51, .1)',
+	overflow   : 'hidden',
+	alignItems : 'stretch'
 }
 
 const styles = (theme) => ({
-	root         : {
-		display    : 'flex',
-		alignItems : 'center',
-		width      : '100%',
-		height     : '450px',
-		margin     : '2em 0',
-		border     : '1px solid #e1e1e1',
-		boxShadow  : '0 2px 12px -2px rgba(51, 51, 51, .1)',
-		overflow   : 'hidden',
-		alignItems : 'stretch'
+	rootLeft           : {
+		...rootBaseStyles,
+		flexDirection : 'row'
 	},
-	productImage : {
-		backgroundRepeat   : 'no-repeat',
-		backgroundPosition : 'center center',
-		backgroundSize     : 'cover'
+	rootRight          : {
+		...rootBaseStyles,
+		flexDirection : 'row-reverse'
 	},
-	brandLogo    : {
-		margin : '1em'
+	productImage       : {
+		backgroundRepeat               : 'no-repeat',
+		backgroundPosition             : 'center center',
+		backgroundSize                 : 'cover',
+		[theme.breakpoints.down('md')]: {
+			minHeight : '250px'
+		}
+	},
+	productNameWrapper : {
+		textAlign                    : 'center',
+		[theme.breakpoints.up('md')]: {
+			alignSelf : 'center'
+		}
+	},
+	productName        : {
+		color                        : '#413852',
+		fontSize                     : '1.1rem',
+		paddingTop                   : '1em',
+		[theme.breakpoints.up('md')]: {
+			fontSize      : '1.5rem',
+			paddingTop    : 0,
+			paddingBottom : '0.5em'
+		}
+	},
+	brandLogo          : {
+		margin                       : '1em',
+		width                        : '70%',
+		[theme.breakpoints.up('md')]: {
+			width : 'auto'
+		}
+	},
+	buyButton          : {
+		marginBottom                 : '1em',
+		[theme.breakpoints.up('md')]: {
+			marginTop : '1em'
+		}
 	}
 })
 

@@ -1,15 +1,12 @@
 import React from 'react'
 import { Typography, withStyles } from '@material-ui/core'
-import { data } from '../../data/home'
-import ProductList from './ProductList'
 
-const Home = ({ classes }) => {
+const Brands = ({ classes }) => {
 	return (
 		<div className={classes.root}>
 			<Typography variant="h5" component="h1" className={classes.title}>
-				Избрани продукти
+				Марки
 			</Typography>
-			<ProductList data={data} />
 		</div>
 	)
 }
@@ -22,4 +19,4 @@ const styles = (theme) => ({
 	}
 })
 
-export default withStyles(styles)(Home)
+export default withStyles(styles)(Brands)

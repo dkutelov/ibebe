@@ -1,12 +1,5 @@
-import React from 'react'
+import WhereToBuy from '../src/components/wheretobuy'
 
-const Wheretobuy = () => {
-	return (
-		<div>
-			<h1>Къде да купя?</h1>
-			<span>goes here</span>
-		</div>
-	)
-}
+const WhereToBuyPage = () => <WhereToBuy />
 
-export default Wheretobuy
+export default WhereToBuyPage
