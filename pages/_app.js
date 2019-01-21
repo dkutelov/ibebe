@@ -53,7 +53,7 @@ class MyApp extends App {
 					{`
 						.wrapper {
 							width: 100%;
-							padding: 1em;
+							padding: 160px 1em 80px 1em;
 						}
 						@media screen and (min-width: 800px) {
 							.wrapper {
@@ -67,7 +67,7 @@ class MyApp extends App {
 				<style global jsx>
 					{`
 						body {
-							color: '#413852';
+							color: #413852;
 						}
 					`}
 				</style>

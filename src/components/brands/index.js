@@ -1,5 +1,6 @@
 import React from 'react'
 import { Typography, withStyles } from '@material-ui/core'
+import PrinceLionheart from './princelionheart/'
 
 const Brands = ({ classes }) => {
 	return (
@@ -7,6 +8,7 @@ const Brands = ({ classes }) => {
 			<Typography variant="h5" component="h1" className={classes.title}>
 				Марки
 			</Typography>
+			<PrinceLionheart />
 		</div>
 	)
 }

@@ -17,14 +17,12 @@ const ActiveLink = ({ router, href, applyColorChange, children, classes }) => {
 	const isCurrentPath = router.pathname === href || router.asPath === href
 
 	return (
-		<div>
-			<a
-				href={href}
-				onClick={handleClick}
-				className={isCurrentPath && applyColorChange ? classes.linkActive : classes.linkNotActive}>
-				{children}
-			</a>
-		</div>
+		<a
+			href={href}
+			onClick={handleClick}
+			className={isCurrentPath && applyColorChange ? classes.linkActive : classes.linkNotActive}>
+			{children}
+		</a>
 	)
 }
 
@@ -35,7 +33,8 @@ const baseLinkStyles = {
 
 	textDecoration : 'none',
 	margin         : 0,
-	padding        : '0 1em',
+	padding        : '0 1.5em',
+	fontWeight     : '300',
 	'&:hover'      : {
 		color : '#26a9bf'
 	}
@@ -43,12 +42,11 @@ const baseLinkStyles = {
 
 const styles = (theme) => ({
 	linkNotActive : {
-		...baseLinkStyles,
-		fontWeight : '300'
+		...baseLinkStyles
 	},
 	linkActive    : {
 		...baseLinkStyles,
-		fontWeight : '500'
+		color : '#808080'
 	}
 })
 

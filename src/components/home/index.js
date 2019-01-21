@@ -5,7 +5,7 @@ import ProductList from './ProductList'
 
 const Home = ({ classes }) => {
 	return (
-		<div className={classes.root}>
+		<div>
 			<Typography variant="h5" component="h1" className={classes.title}>
 				Избрани продукти
 			</Typography>

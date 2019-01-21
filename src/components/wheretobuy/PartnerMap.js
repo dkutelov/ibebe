@@ -5,11 +5,11 @@ const Marker = () => <Place color="secondary" fontSize="large" />
 const PartnerName = ({ name }) => (
 	<h2
 		style={{
-			color: '#762E61',
-			marginTop: '-1.5em',
-			width: '200px',
-			transform: 'translateX(-50%)',
-			textAlign: 'center'
+			color     : '#762E61',
+			marginTop : '-1.5em',
+			width     : '200px',
+			transform : 'translateX(-50%)',
+			textAlign : 'center'
 		}}>
 		{name}
 	</h2>
