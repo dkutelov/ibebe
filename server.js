@@ -1,11 +1,11 @@
 const express = require('express')
 const next = require('next')
-//const http = require('http')
 const url = require('url')
 const path = require('path')
 const sendMail = require('./sendMail')
 
 const port = process.env.PORT || 7777
+require('dotenv').config({ path: '.env' })
 const dev = process.env.NODE_ENV !== 'production'
 
 const app = next({ dev })
@@ -17,7 +17,6 @@ app.prepare().then(() => {
 	server.post('/send-message', async (req, res) => {
 		const data = req.body
 		const sentEmail = await sendMail(data)
-		console.log(sentEmail)
 		if (sentEmail && sentEmail.messageId) {
 			res.end('OK')
 		}
