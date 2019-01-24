@@ -6,14 +6,16 @@ const Partner = ({ partner, classes }) => {
 		<Card className={classes.card}>
 			<CardContent className={classes.cardColumn}>
 				<div className={classes.logoContainer}>
-					<img className={classes.logo} src={partner.logoURL} alt={`Лого на ${partner.name}`} />
+					<a href={partner.siteURL} target="_blank">
+						<img className={classes.logo} src={partner.logoURL} alt={`Лого на ${partner.name}`} />
+					</a>
 				</div>
 			</CardContent>
 			<CardContent className={classes.cardColumn}>
-				<Typography component="h2" variant="h5" style={{ margin: '1em 0 0.5em 0' }}>
+				<Typography component="h2" variant="h5" style={{ margin: '1em 0 0.5em 0', color: '#413852' }}>
 					{partner.name}
 				</Typography>
-				<Typography variant="body1" color="textSecondary">
+				<Typography variant="body1" style={{ color: '#413852' }}>
 					Адрес: {partner.address}
 				</Typography>
 				<Typography
@@ -23,14 +25,14 @@ const Partner = ({ partner, classes }) => {
 					style={{ margin: '0.5em 0 0.25em 0', fontWeight: 'bold' }}>
 					За контакти:
 				</Typography>
-				<Typography variant="body2" color="textSecondary">
+				<Typography variant="body2" style={{ color: '#413852' }}>
 					тел.: {partner.phones} <br />
 					Работно време: {partner.workingTime} <br />
 					Онлайн магазин: {partner.siteURL}
 				</Typography>
 				<CardActions>
 					<a href={partner.siteURL} className={classes.buyButtonContainer} target="_blank">
-						<Button size="small" variant="contained" color="primary" className={classes.buyButton}>
+						<Button size="large" variant="contained" color="primary" className={classes.buyButton}>
 							Пазарувай
 						</Button>
 					</a>
@@ -80,7 +82,8 @@ const styles = (theme) => ({
 		paddingRight   : '2em'
 	},
 	buyButton          : {
-		margin : '1em 0'
+		margin       : '1em 0',
+		borderRadius : '0 !important'
 	}
 })
 
