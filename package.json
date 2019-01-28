@@ -18,6 +18,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-jss": "^8.1.0",
+    "react-responsive-picture": "^3.1.0",
     "react-reveal": "^1.2.2",
     "sw-precache-webpack-plugin": "^0.11.5",
     "yup": "^0.26.7"
@@ -25,6 +26,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "now --public"
   }
 }

@@ -39,7 +39,7 @@ class Contact extends React.Component {
 	render () {
 		const { classes } = this.props
 		const { openSuccess } = this.state
-		const values = { name: 'dariy', email: 'dari.k@abv.bg', message: 'The is a test message.' }
+		const values = { name: '', email: '', message: '' }
 		return (
 			<div>
 				<Typography variant="h5" component="h1" className={classes.title}>
@@ -79,7 +79,7 @@ const styles = (theme) => ({
 		alignItems                   : 'center',
 		padding                      : theme.spacing.unit * 2,
 		[theme.breakpoints.up('md')]: {
-			width       : '60%',
+			width       : '40%',
 			marginLeft  : 'auto',
 			marginRight : 'auto'
 		}

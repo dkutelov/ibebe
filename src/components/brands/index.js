@@ -1,6 +1,8 @@
 import React from 'react'
-import { Typography, withStyles } from '@material-ui/core'
+import { Typography, Divider, withStyles } from '@material-ui/core'
+
 import PrinceLionheart from './princelionheart/'
+import Trisiton from './trisiton'
 
 const Brands = ({ classes }) => {
 	return (
@@ -9,6 +11,8 @@ const Brands = ({ classes }) => {
 				Марки
 			</Typography>
 			<PrinceLionheart />
+			<Divider />
+			<Trisiton />
 		</div>
 	)
 }

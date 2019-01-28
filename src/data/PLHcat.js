@@ -12,6 +12,20 @@ const data = [
 		categoryTitle       : 'За игра',
 		cetegorySubtitle    : 'Подложки за игра',
 		categoryDescription : 'Дървени колела за балансиране Original'
+	},
+	{
+		id                  : 3,
+		avatarURL           : '/static/images/brands/plh/play.jpg',
+		categoryTitle       : 'За игра',
+		cetegorySubtitle    : 'Подложки за игра',
+		categoryDescription : 'Дървени колела за балансиране Original'
+	},
+	{
+		id                  : 4,
+		avatarURL           : '/static/images/brands/plh/play.jpg',
+		categoryTitle       : 'За игра',
+		cetegorySubtitle    : 'Подложки за игра',
+		categoryDescription : 'Дървени колела за балансиране Original'
 	}
 ]
 

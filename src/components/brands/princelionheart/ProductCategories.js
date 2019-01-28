@@ -12,8 +12,8 @@ const ProductCategories = ({ classes }) => {
 
 const styles = (theme) => ({
 	root : {
+		display         : 'flex',
 		width           : '100%',
-		maxWidth        : 500,
 		backgroundColor : theme.palette.background.paper
 	}
 })

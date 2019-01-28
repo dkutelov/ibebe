@@ -1,10 +1,10 @@
-import Product from './Product'
+import Product from './ProductNew'
 
 const ProductList = ({ data }) => {
 	return (
 		<div>
 			{data.map((product, i) => (
-				<Product key={product.id} product={product} layoutAlignLeft={!(i % 2)} width={7} />
+				<Product key={product.id} product={product} layoutAlignLeft={!(i % 2)} width={6} />
 			))}
 		</div>
 	)
