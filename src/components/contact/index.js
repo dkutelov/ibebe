@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Fragment } from 'react'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { Typography, Avatar, Paper, withStyles } from '@material-ui/core'
@@ -41,10 +42,7 @@ class Contact extends React.Component {
 		const { openSuccess } = this.state
 		const values = { name: '', email: '', message: '' }
 		return (
-			<div>
-				<Typography variant="h5" component="h1" className={classes.title}>
-					За контакти
-				</Typography>
+			<Fragment>
 				<Typography variant="body2" style={{ textAlign: 'center', marginTop: '2em' }}>
 					Пишете ни за всякакви въпроси, които ви вълнуват.
 				</Typography>
@@ -60,7 +58,7 @@ class Contact extends React.Component {
 					/>
 				</Paper>
 				<SuccessMessage openSuccess={openSuccess} />
-			</div>
+			</Fragment>
 		)
 	}
 }

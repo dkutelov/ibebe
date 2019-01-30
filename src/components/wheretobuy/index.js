@@ -1,29 +1,15 @@
-import { Typography, withStyles } from '@material-ui/core'
-
+import { Fragment } from 'react'
 import { data } from '../../data/partner'
 import PartnerList from './PartnerList'
 import OnlinePartnersList from './OnlinePartnersList'
 
-const WhereToBuy = ({ classes }) => {
+const WhereToBuy = () => {
 	return (
-		<div>
-			<Typography variant="h5" component="h2" className={classes.title}>
-				Нашите парньори
-			</Typography>
+		<Fragment>
 			<PartnerList data={data} />
 			<OnlinePartnersList data={data} />
-		</div>
+		</Fragment>
 	)
 }
 
-const styles = (theme) => ({
-	title : {
-		marginTop     : '1em',
-		marginBottom  : '1em',
-		color         : '#413852',
-		textAlign     : 'center',
-		textTransform : 'uppercase'
-	}
-})
-
-export default withStyles(styles)(WhereToBuy)
+export default WhereToBuy

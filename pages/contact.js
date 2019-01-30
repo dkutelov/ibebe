@@ -6,6 +6,7 @@ const ContactPage = () => (
 	<Layout
 		title="Форма за контакт с iBebe.bg"
 		description="Не се колебайте да ни пишете по всякакви въпроси, свързани с марките, които предлагаме, този сайт или други въпроси, които ви вълнуват"
+		pageHeading="За контакти"
 		keywords="контакт, ibebe.bg"
 		fullWidth={true}>
 		<Contact />

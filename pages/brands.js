@@ -6,6 +6,7 @@ const BrandsPage = () => (
 	<Layout
 		title="Марки бебешки и детски стоки, предлагани от iBebe.bg"
 		description="iBebe.bg предлага внимателно избрани марки като Prince Lionheart, Luvion, Tris @ Ton, Walkinkmum, Twistshake, MiniMonkey."
+		pageHeading="Марки"
 		keywords="Prince Lionheart, Luvion, Tris @ Ton, Walkinkmum, Twistshake, MiniMonkey"
 		fullWidth={true}>
 		<Brands />

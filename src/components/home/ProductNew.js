@@ -18,15 +18,21 @@ const Product = ({ product, classes, layoutAlignLeft, width }) => (
 				className={classes.image}
 			/>
 		</Grid>
-		<Grid item xs={12} sm={12 - width} className={classes.productNameWrapper}>
+		<Grid item xs={12} sm={12 - width} className={classes.product_details_wrapper}>
 			<Zoom delay={300}>
-				<Typography variant="h5" component="h1" className={classes.productName}>
+				<Typography variant="h3" component="h2" className={classes.product_name}>
 					{product.name}
 				</Typography>
-				<img src={product.brand} className={classes.brandLogo} />
+				<Typography variant="h4" component="h3" className={classes.product_name}>
+					{product.brandName}
+				</Typography>
+				<Typography variant="subtitle1" className={classes.product_decription}>
+					{product.description}
+				</Typography>
+				{/* <img src={product.brand} className={classes.brandLogo} /> */}
 				<Link href="./wheretobuy">
 					<a style={{ textDecoration: 'none' }}>
-						<Button variant="contained" color="primary" className={classes.buyButton}>
+						<Button size="large" variant="contained" color="primary" className={classes.buy_button}>
 							Къде да купя
 						</Button>
 					</a>
@@ -37,24 +43,21 @@ const Product = ({ product, classes, layoutAlignLeft, width }) => (
 )
 
 const rootBaseStyles = {
-	display    : 'flex',
-	width      : '100%',
-	margin     : '2em 0',
-	border     : 'none',
-	overflow   : 'hidden',
-	alignItems : 'stretch'
+	width  : '100%',
+	margin : '2em 0',
+	border : 'none'
 }
 
 const styles = (theme) => ({
-	rootLeft           : {
+	rootLeft                : {
 		...rootBaseStyles,
 		flexDirection : 'row'
 	},
-	rootRight          : {
+	rootRight               : {
 		...rootBaseStyles,
 		flexDirection : 'row-reverse'
 	},
-	productImage       : {
+	productImage            : {
 		backgroundRepeat               : 'no-repeat',
 		backgroundPosition             : 'center center',
 		backgroundSize                 : 'cover',
@@ -62,36 +65,36 @@ const styles = (theme) => ({
 			minHeight : '250px'
 		}
 	},
-	image              : {
+	image                   : {
 		maxWidth : '100%'
 	},
-	productNameWrapper : {
-		textAlign                    : 'center',
+	product_details_wrapper : {
+		padding                      : '0 8rem',
 		[theme.breakpoints.up('sm')]: {
 			alignSelf : 'center'
 		}
 	},
-	productName        : {
+	product_name            : {
 		color                        : '#413852',
-		fontSize                     : '1.1rem',
 		paddingTop                   : '1em',
 		[theme.breakpoints.up('md')]: {
-			fontSize      : '1.5rem',
 			paddingTop    : 0,
 			paddingBottom : '0.5em'
 		}
 	},
-	brandLogo          : {
-		margin                       : '1em',
-		width                        : '70%',
+	product_decription      : {},
+	brandLogo               : {
+		margin                       : '1em 0',
+		width                        : '40%',
 		[theme.breakpoints.up('sm')]: {
 			width : 'auto'
 		}
 	},
-	buyButton          : {
+	buy_button              : {
 		marginBottom                 : '1em',
+		borderRadius                 : '0',
 		[theme.breakpoints.up('sm')]: {
-			marginTop : '1em'
+			marginTop : '2em'
 		}
 	}
 })
