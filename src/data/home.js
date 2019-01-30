@@ -14,10 +14,19 @@ const data = [
 		name          : 'Ергономична раница Dynamic',
 		brandName     : 'MiniMonkey',
 		description   :
-			' Изцяло нов начин да носите бебето си! Ергономичната раница на Minimonkey е единствената, при която тежестта не се поема от раменете и гърба.',
+			'Изцяло нов начин да носите бебето си! Ергономичната раница на Minimonkey е единствената, при която тежестта не се поема от раменете и гърба.',
 		imageURL      : './static/images/home/ergonomichna-ranica.jpeg',
 		brand         : './static/images/logos/minimonkey-logo.svg',
 		imageFileName : 'ergonomichna-ranica.jpg'
+	},
+	{
+		id            : 3,
+		name          : 'Предпазна лента',
+		brandName     : 'Prince Lionheart',
+		description   :
+			'Защитете Вашето дете от остри ръбове. Предпазната лента от мека пяна, която лесно пасва на ръбовете на всяка маса.',
+		imageURL      : './static/images/home/ergonomichna-ranica.jpeg',
+		imageFileName : 'edge-guards.jpg'
 	}
 ]
 

@@ -1,91 +1,136 @@
 import Link from 'next/link'
 import { Grid, withStyles, Typography, Button } from '@material-ui/core'
+import { Picture } from 'react-responsive-picture'
 import Zoom from 'react-reveal/Zoom'
 
 // mobile
 
 const Product = ({ product, classes, layoutAlignLeft, width }) => (
-	<Grid container className={layoutAlignLeft ? classes.rootLeft : classes.rootRight}>
-		<Grid
-			item
-			xs={12}
-			md={width}
-			style={{ backgroundImage: `url(${product.imageURL})` }}
-			className={classes.productImage}
-		/>
-		<Grid item xs={12} md={12 - width} className={classes.productNameWrapper}>
+	<Grid
+		container
+		className={
+			layoutAlignLeft ? (
+				`${classes.rootBaseStyles} ${classes.rootLeft}`
+			) : (
+				`${classes.rootBaseStyles} ${classes.rootRight}`
+			)
+		}>
+		<div className={classes.image_wrapper}>
+			<Picture
+				src={`
+					https://res.cloudinary.com/dariku/image/upload/c_fill,h_1000,q_auto,w_1000/v1548513244/ibebe/${product.imageFileName} 1000w,
+					https://res.cloudinary.com/dariku/image/upload/c_fill,h_800,q_auto,w_800/v1548513244/ibebe/${product.imageFileName} 800w,
+					https://res.cloudinary.com/dariku/image/upload/c_fill,h_500,q_auto:eco,w_500/v1548513244/ibebe/${product.imageFileName} 500w`}
+				sizes="(min-width: 600px) 50vw, 100vw"
+				alt={product.name}
+				className={classes.image}
+			/>
+		</div>
+		<div className={classes.product_details_wrapper}>
 			<Zoom delay={300}>
-				<Typography variant="h5" component="h1" className={classes.productName}>
+				<Typography variant="h3" component="h2" className={classes.product_name}>
 					{product.name}
 				</Typography>
-				<img src={product.brand} className={classes.brandLogo} />
+				<Typography variant="h4" component="h3" className={classes.brand_name}>
+					{product.brandName}
+				</Typography>
+				<Typography variant="subtitle1" className={classes.product_decription}>
+					{product.description}
+				</Typography>
 				<Link href="./wheretobuy">
 					<a style={{ textDecoration: 'none' }}>
-						<Button variant="contained" color="primary" className={classes.buyButton}>
+						<Button size="large" variant="contained" color="primary" className={classes.buy_button}>
 							Къде да купя
 						</Button>
 					</a>
 				</Link>
 			</Zoom>
-		</Grid>
+		</div>
 	</Grid>
 )
 
-const rootBaseStyles = {
-	display    : 'flex',
-	width      : '100%',
-	height     : '450px',
-	margin     : '2em 0',
-	border     : '1px solid #e1e1e1',
-	boxShadow  : '0 2px 12px -2px rgba(51, 51, 51, .1)',
-	overflow   : 'hidden',
-	alignItems : 'stretch'
-}
-
 const styles = (theme) => ({
-	rootLeft           : {
-		...rootBaseStyles,
-		flexDirection : 'row'
+	rootBaseStyles          : {
+		width          : '100%',
+		margin         : '2em 0',
+		border         : 'none',
+		flexWrap       : 'nowrap',
+		justifyContent : 'space-between'
 	},
-	rootRight          : {
-		...rootBaseStyles,
-		flexDirection : 'row-reverse'
-	},
-	productImage       : {
-		backgroundRepeat               : 'no-repeat',
-		backgroundPosition             : 'center center',
-		backgroundSize                 : 'cover',
-		[theme.breakpoints.down('md')]: {
-			minHeight : '250px'
+	rootLeft                : {
+		flexDirection                : 'column',
+		[theme.breakpoints.up('md')]: {
+			flexDirection : 'row'
 		}
 	},
-	productNameWrapper : {
+	rootRight               : {
+		flexDirection                : 'column',
+		[theme.breakpoints.up('md')]: {
+			flexDirection : 'row-reverse'
+		}
+	},
+	image_wrapper           : {
+		width                        : '100%',
+		maxWidth                     : '100%',
+		[theme.breakpoints.up('md')]: {
+			width : '50%'
+		}
+	},
+	image                   : {
+		width                        : '100%',
+		[theme.breakpoints.up('md')]: {
+			maxWidth : '100%'
+		}
+	},
+	product_details_wrapper : {
+		padding                      : '1em',
 		textAlign                    : 'center',
 		[theme.breakpoints.up('md')]: {
-			alignSelf : 'center'
+			width          : '23rem',
+			display        : 'flex',
+			flexDirection  : 'column',
+			justifyContent : 'center',
+			margin         : 'auto',
+			textAlign      : 'left'
+		},
+		[theme.breakpoints.up('lg')]: {
+			width : '28rem'
 		}
 	},
-	productName        : {
+	product_name            : {
 		color                        : '#413852',
-		fontSize                     : '1.1rem',
-		paddingTop                   : '1em',
+		fontSize                     : '2rem',
+		[theme.breakpoints.up('sm')]: {
+			paddingTop : '1em'
+		},
 		[theme.breakpoints.up('md')]: {
-			fontSize      : '1.5rem',
+			fontSize      : '3rem',
 			paddingTop    : 0,
 			paddingBottom : '0.5em'
 		}
 	},
-	brandLogo          : {
-		margin                       : '1em',
-		width                        : '70%',
+	brand_name              : {
+		margin                       : '0.5em 0',
+		color                        : '#413852',
+		fontSize                     : '1.5rem',
 		[theme.breakpoints.up('md')]: {
-			width : 'auto'
+			fontSize      : '2.125rem',
+			paddingBottom : '0.5em',
+			margin        : '0'
 		}
 	},
-	buyButton          : {
-		marginBottom                 : '1em',
+	product_decription      : {
+		lineHeight                   : '1.5',
 		[theme.breakpoints.up('md')]: {
-			marginTop : '1em'
+			lineHeight : '1.75'
+		}
+	},
+	buy_button              : {
+		marginTop                    : '1em',
+		marginBottom                 : '1em',
+		borderRadius                 : '0',
+		[theme.breakpoints.up('sm')]: {
+			marginTop : '2em'
 		}
 	}
 })
