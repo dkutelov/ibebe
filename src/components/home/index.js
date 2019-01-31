@@ -1,19 +1,30 @@
-import React from 'react'
-import { Typography, withStyles } from '@material-ui/core'
+import { Component } from 'react'
 import { data } from '../../data/home'
 import ProductList from './ProductList'
 
-const Home = ({ classes }) => {
-	return <ProductList data={data} />
+class Home extends Component {
+	state = {
+		products : []
+	}
+	componentDidMount () {
+		const shaffledProducts = this.shaffleProducts(data)
+		this.setState({ products: shaffledProducts })
+	}
+	componentWillUnmount () {
+		this.setState({ products: [] })
+	}
+	shaffleProducts = (products) => {
+		products.forEach((product, index) => {
+			const randomIndex = Math.floor(Math.random() * (index + 1))
+			const temp = products[index]
+			products[index] = products[randomIndex]
+			products[randomIndex] = temp
+		})
+		return products
+	}
+	render () {
+		return <ProductList data={this.state.products} />
+	}
 }
 
-const styles = (theme) => ({
-	title : {
-		margin    : '1.5em 0',
-		fontSize  : '2rem',
-		color     : '#413852',
-		textAlign : 'center'
-	}
-})
-
-export default withStyles(styles)(Home)
+export default Home
