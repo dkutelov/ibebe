@@ -5,7 +5,7 @@ import Zoom from 'react-reveal/Zoom'
 
 // mobile
 
-const Product = ({ product, classes, layoutAlignLeft, width }) => (
+const Product = ({ product, classes, layoutAlignLeft }) => (
 	<Grid
 		container
 		className={
@@ -18,16 +18,16 @@ const Product = ({ product, classes, layoutAlignLeft, width }) => (
 		<div className={classes.image_wrapper}>
 			<Picture
 				src={`
-					https://res.cloudinary.com/dariku/image/upload/c_fill,h_1000,q_auto,w_1000/v1548513244/ibebe/${product.imageFileName} 1000w,
-					https://res.cloudinary.com/dariku/image/upload/c_fill,h_800,q_auto,w_800/v1548513244/ibebe/${product.imageFileName} 800w,
-					https://res.cloudinary.com/dariku/image/upload/c_fill,h_500,q_auto:eco,w_500/v1548513244/ibebe/${product.imageFileName} 500w`}
-				sizes="(min-width: 600px) 50vw, 100vw"
+					https://res.cloudinary.com/dariku/image/upload/c_fill,h_1200,q_auto,f_auto,w_1200/v1548513244/ibebe/${product.imageFileName} 1200w,
+					https://res.cloudinary.com/dariku/image/upload/c_fill,h_900,q_auto,f_auto,w_900/v1548513244/ibebe/${product.imageFileName} 900w,
+					https://res.cloudinary.com/dariku/image/upload/c_fill,h_500,q_auto:eco,f_auto,w_500/v1548513244/ibebe/${product.imageFileName} 500w`}
+				sizes="(min-width: 600px) 40vw, 90vw"
 				alt={product.name}
 				className={classes.image}
 			/>
 		</div>
 		<div className={classes.product_details_wrapper}>
-			<Zoom delay={300}>
+			<Zoom delay={100}>
 				<Typography variant="h3" component="h2" className={classes.product_name}>
 					{product.name}
 				</Typography>
@@ -52,7 +52,8 @@ const Product = ({ product, classes, layoutAlignLeft, width }) => (
 const styles = (theme) => ({
 	rootBaseStyles          : {
 		width          : '100%',
-		margin         : '2em 0',
+		margin         : 0,
+		lineHeight     : 1,
 		border         : 'none',
 		flexWrap       : 'nowrap',
 		justifyContent : 'space-between'
@@ -78,6 +79,7 @@ const styles = (theme) => ({
 	},
 	image                   : {
 		width                        : '100%',
+		height                       : '100%',
 		[theme.breakpoints.up('md')]: {
 			maxWidth : '100%'
 		}

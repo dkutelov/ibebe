@@ -3,7 +3,7 @@ import { Grid, withStyles } from '@material-ui/core'
 
 const Footer = ({ classes }) => {
 	return (
-		<footer>
+		<footer className={classes.footer}>
 			<div className={classes.footer_border_top} />
 			<Grid container className={classes.wrapper}>
 				<Grid item xs={12}>
@@ -15,6 +15,11 @@ const Footer = ({ classes }) => {
 }
 
 const styles = (theme) => ({
+	footer            : {
+		position   : 'relative',
+		background : '#fff',
+		bottom     : 0
+	},
 	wrapper           : {
 		width                        : '100%',
 		margin                       : '1em',

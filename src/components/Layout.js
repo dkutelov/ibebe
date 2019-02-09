@@ -11,9 +11,11 @@ const Layout = ({ children, pageHeading, title, description, keywords, fullWidth
 				<meta name="keywords" content={keywords} />
 			</Head>
 			<div className={fullWidth ? `${classes.wrapper}` : `${classes.wrapper} ${classes.wrapperBoxed}`}>
-				<Typography variant="h5" component="h1" className={classes.title}>
-					{pageHeading}
-				</Typography>
+				{pageHeading && (
+					<Typography variant="h5" component="h1" className={classes.title}>
+						{pageHeading}
+					</Typography>
+				)}
 				{children}
 			</div>
 		</Fragment>
@@ -23,15 +25,17 @@ const Layout = ({ children, pageHeading, title, description, keywords, fullWidth
 const styles = (theme) => ({
 	wrapper      : {
 		width                        : '100%',
-		padding                      : '160px 1em 80px 1em',
+		padding                      : '167px 1em 80px 1em',
 		[theme.breakpoints.up('sm')]: {
-			padding : '160px 0 80px'
+			padding : '167px 0 80px'
 		}
 	},
 	wrapperBoxed : {
-		width    : '80%',
-		margin   : '0 auto',
-		maxWidth : '1350px'
+		[theme.breakpoints.up('sm')]: {
+			width    : '80%',
+			margin   : '0 auto',
+			maxWidth : '1350px'
+		}
 	},
 	title        : {
 		margin                       : '1em 0',

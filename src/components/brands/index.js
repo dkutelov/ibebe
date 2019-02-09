@@ -8,7 +8,7 @@ const Brands = () => (
 	<Fragment>
 		<PrinceLionheart />
 		<Divider />
-		<Trisiton />
+		{/* <Trisiton /> */}
 	</Fragment>
 )
 

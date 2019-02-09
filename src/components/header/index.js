@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { AppBar, Grid, withStyles } from '@material-ui/core'
+import { Picture } from 'react-responsive-picture'
+
 import NavBar from '../navbar'
 
 const Header = ({ classes }) => {
@@ -10,7 +12,12 @@ const Header = ({ classes }) => {
 				<Grid item xs={12}>
 					<Link href="/">
 						<a>
-							<img src="./static/images/logo.png" alt="logo" className={classes.logo} />
+							<Picture
+								src={`static/images/logo-large.png 400w, static/images/logo-medium.png 300w, static/images/logo-small.png 200w`}
+								sizes="(min-width: 600px) 33vw, 15vw"
+								alt="лого на ibebe"
+								className={classes.logo}
+							/>
 						</a>
 					</Link>
 				</Grid>
