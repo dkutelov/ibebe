@@ -14,7 +14,7 @@
     "next": "latest",
     "next-nprogress": "^1.4.0",
     "nodemailer": "^5.1.1",
-    "prop-types": "latest",
+    "prop-types": "^15.6.2",
     "react": "latest",
     "react-dom": "latest",
     "react-jss": "^8.1.0",
