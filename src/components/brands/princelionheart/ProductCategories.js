@@ -12,9 +12,15 @@ const ProductCategories = ({ classes }) => {
 
 const styles = (theme) => ({
 	root : {
-		display         : 'flex',
-		width           : '100%',
-		backgroundColor : theme.palette.background.paper
+		display                      : 'grid',
+		gridTemplateColumns          : '1fr',
+		backgroundColor              : theme.palette.background.paper,
+		[theme.breakpoints.up('sm')]: {
+			gridTemplateColumns : '1fr 1fr'
+		},
+		[theme.breakpoints.up('lg')]: {
+			gridTemplateColumns : '1fr 1fr 1fr 1fr'
+		}
 	}
 })
 

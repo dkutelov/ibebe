@@ -10,22 +10,22 @@ const data = [
 		id                  : 2,
 		avatarURL           : '/static/images/brands/plh/play.jpg',
 		categoryTitle       : 'За игра',
-		cetegorySubtitle    : 'Подложки за игра',
-		categoryDescription : 'Дървени колела за балансиране Original'
+		cetegorySubtitle    : 'Подложки за игра, дървени колела',
+		categoryDescription : 'Голяма двустранна подложка за игра'
 	},
 	{
 		id                  : 3,
-		avatarURL           : '/static/images/brands/plh/play.jpg',
-		categoryTitle       : 'За игра',
-		cetegorySubtitle    : 'Подложки за игра',
-		categoryDescription : 'Дървени колела за балансиране Original'
+		avatarURL           : '/static/images/brands/plh/security.jpeg',
+		categoryTitle       : 'Безопасност',
+		cetegorySubtitle    : 'Предпазители за ъгли, печки, камини',
+		categoryDescription : 'Предпазна лента за ръбове с 4 ъгълчета'
 	},
 	{
 		id                  : 4,
-		avatarURL           : '/static/images/brands/plh/play.jpg',
-		categoryTitle       : 'За игра',
-		cetegorySubtitle    : 'Подложки за игра',
-		categoryDescription : 'Дървени колела за балансиране Original'
+		avatarURL           : '/static/images/brands/plh/seatsaver.jpeg',
+		categoryTitle       : 'Пътуване',
+		cetegorySubtitle    : 'Предпазители за седалки, органайзъри',
+		categoryDescription : 'Предпазна подложка за автомобилна седалка'
 	}
 ]
 
