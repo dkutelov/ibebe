@@ -30,7 +30,7 @@ const styles = (theme) => ({
 		}
 	},
 	footer_border_top : {
-		width           : '100 %',
+		width           : '100%',
 		height          : '2px',
 		border          : 'none',
 		backgroundImage :

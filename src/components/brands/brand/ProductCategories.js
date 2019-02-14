@@ -1,11 +1,10 @@
 import { withStyles, List } from '@material-ui/core'
-import { data } from '../../../data/PLHcat'
 import ProductCategorieslistItem from './ProductCategorieslistItem'
 
-const ProductCategories = ({ classes }) => {
+const ProductCategories = ({ classes, categories }) => {
 	return (
 		<List className={classes.root}>
-			{data.map((category) => <ProductCategorieslistItem key={category.id} {...category} />)}
+			{categories.map((category) => <ProductCategorieslistItem key={category.id} {...category} />)}
 		</List>
 	)
 }

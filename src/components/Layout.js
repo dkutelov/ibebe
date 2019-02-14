@@ -24,7 +24,6 @@ const Layout = ({ children, pageHeading, title, description, keywords, fullWidth
 
 const styles = (theme) => ({
 	wrapper      : {
-		width                        : '100%',
 		padding                      : '167px 1em 80px 1em',
 		[theme.breakpoints.up('sm')]: {
 			padding : '167px 0 80px'

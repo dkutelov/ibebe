@@ -46,6 +46,7 @@ class MyApp extends App {
 					{`
 						body {
 							color: #413852;
+							margin: 0;
 						}
 					`}
 				</style>
