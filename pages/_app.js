@@ -4,7 +4,6 @@ import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import JssProvider from 'react-jss/lib/JssProvider'
 import getPageContext from '../src/getPageContext'
-import NProgress from 'next-nprogress/component'
 import Header from '../src/components/header'
 import Footer from '../src/components/footer'
 class MyApp extends App {
@@ -41,7 +40,6 @@ class MyApp extends App {
 						<Footer />
 					</MuiThemeProvider>
 				</JssProvider>
-				<NProgress color="#26a9bf" options={{ trickleSpeed: 50 }} showAfterMs={100} spinner={true} />
 				<style global jsx>
 					{`
 						body {
