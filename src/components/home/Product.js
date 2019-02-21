@@ -1,4 +1,4 @@
-import Link from 'next/link'
+//import Link from 'next/link'
 import { Grid, withStyles, Typography, Button } from '@material-ui/core'
 import { Picture } from 'react-responsive-picture'
 import Zoom from 'react-reveal/Zoom'
@@ -37,13 +37,11 @@ const Product = ({ product, classes, layoutAlignLeft }) => (
 				<Typography variant="subtitle1" className={classes.product_decription}>
 					{product.description}
 				</Typography>
-				<Link href="./wheretobuy">
-					<a style={{ textDecoration: 'none' }}>
-						<Button size="large" variant="contained" color="primary" className={classes.buy_button}>
-							Къде да купя
-						</Button>
-					</a>
-				</Link>
+				<a href={product.linkToBuy} style={{ textDecoration: 'none' }}>
+					<Button size="large" variant="contained" color="primary" className={classes.buy_button}>
+						Къде да купя
+					</Button>
+				</a>
 			</Zoom>
 		</div>
 	</Grid>
@@ -102,6 +100,7 @@ const styles = (theme) => ({
 	product_name            : {
 		color                        : '#413852',
 		fontSize                     : '2rem',
+		paddingTop                   : '5px',
 		[theme.breakpoints.up('sm')]: {
 			paddingTop : '1em'
 		},
@@ -112,7 +111,7 @@ const styles = (theme) => ({
 		}
 	},
 	brand_name              : {
-		margin                       : '0.5em 0',
+		margin                       : '0.25em 0 0.75em',
 		color                        : '#413852',
 		fontSize                     : '1.5rem',
 		[theme.breakpoints.up('md')]: {
@@ -128,8 +127,8 @@ const styles = (theme) => ({
 		}
 	},
 	buy_button              : {
-		marginTop                    : '1em',
-		marginBottom                 : '1em',
+		marginTop                    : '1.75em',
+		marginBottom                 : '1.4em',
 		borderRadius                 : '0',
 		[theme.breakpoints.up('sm')]: {
 			marginTop : '2em'

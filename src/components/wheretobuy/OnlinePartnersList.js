@@ -13,7 +13,7 @@ const OnlinePartnersList = ({ data, classes }) => {
 				{data.map((partner) => {
 					if (partner.onlineOnly) {
 						return (
-							<Grid item xs={12} md={4} className={classes.online_partner} key={partner.id}>
+							<Grid item xs={6} md={4} className={classes.online_partner} key={partner.id}>
 								<div className={classes.online_partner_inner}>
 									<a href={partner.siteURL} target="_blank" className={classes.online_partner_link}>
 										<img
@@ -34,10 +34,17 @@ const OnlinePartnersList = ({ data, classes }) => {
 
 const styles = (theme) => ({
 	root                 : {
-		flexGrow : 1
+		flexGrow                     : 1,
+		padding                      : '0 1em',
+		[theme.breakpoints.up('md')]: {
+			padding : 0
+		}
 	},
 	online_partner       : {
-		height : '17em'
+		height                       : '9em',
+		[theme.breakpoints.up('md')]: {
+			height : '17em'
+		}
 	},
 	online_partner_inner : {
 		padding         : '0 !important',

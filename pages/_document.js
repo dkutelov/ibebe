@@ -10,10 +10,7 @@ class MyDocument extends Document {
 			<html lang="bg" dir="ltr">
 				<Head>
 					<meta charSet="utf-8" />
-					<meta
-						name="viewport"
-						content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-					/>
+					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 					<meta name="robots" content="index, follow" />
 					<meta name="theme-color" content={pageContext ? pageContext.theme.palette.primary.main : null} />
 					<link

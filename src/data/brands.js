@@ -62,8 +62,8 @@ export const brands = [
 		titleColor  : '#313131',
 		borderColor : '#F4BB41',
 		imageBlock  : {
-			largeImage  : 'pottypod.jpg',
-			smallImage  : 'theeter.jpg',
+			largeImage  : 'mini_monkey.jpg',
+			smallImage  : 'dymamic_sm.jpg',
 			subheadline : 'Активен и мобилен начин на живот',
 			content     :
 				'Без да бъдете ограничавани от средата или пък зависими от колички или от наличието на удобно и безопасно столче, в което да поставяте детето си.'
@@ -71,32 +71,112 @@ export const brands = [
 		categories  : [
 			{
 				id                  : 1,
-				avatarURL           : '/static/images/brands/plh/bath.jpg',
-				categoryTitle       : 'За баня',
-				cetegorySubtitle    : 'Детски гърнета и седалки',
-				categoryDescription : 'Меко детско гърненце PottyPOD® SQUISH'
+				avatarURL           : '/static/images/brands/mm/dynamic_black.jpg',
+				categoryTitle       : 'Ергономична раница',
+				cetegorySubtitle    : 'Dynamic в черно и оранжево',
+				categoryDescription : '100% памук, четири начина на носене'
 			},
 			{
 				id                  : 2,
-				avatarURL           : '/static/images/brands/plh/play.jpg',
-				categoryTitle       : 'За игра',
-				cetegorySubtitle    : 'Подложки за игра, дървени колела',
-				categoryDescription : 'Голяма двустранна подложка за игра'
+				avatarURL           : '/static/images/brands/mm/unlimited.jpg',
+				categoryTitle       : 'Слинг за носене на бебе',
+				cetegorySubtitle    : 'Unlimited',
+				categoryDescription : 'Ергономичен, безопасен и удобен'
 			},
 			{
 				id                  : 3,
-				avatarURL           : '/static/images/brands/plh/security.jpeg',
-				categoryTitle       : 'Безопасност',
-				cetegorySubtitle    : 'Предпазители за ъгли, печки, камини',
-				categoryDescription : 'Предпазна лента за ръбове с 4 ъгълчета'
+				avatarURL           : '/static/images/brands/mm/minichair.jpg',
+				categoryTitle       : 'Minichair',
+				cetegorySubtitle    : 'Текстилна седалка',
+				categoryDescription : 'Превръща всеки стол в детско столче'
 			},
 			{
 				id                  : 4,
-				avatarURL           : '/static/images/brands/plh/seatsaver.jpeg',
-				categoryTitle       : 'Пътуване',
-				cetegorySubtitle    : 'Предпазители за седалки, органайзъри',
-				categoryDescription : 'Предпазна подложка за автомобилна седалка'
+				avatarURL           : '/static/images/brands/mm/dynamic_pink.jpg',
+				categoryTitle       : 'Ергономична раница',
+				cetegorySubtitle    : 'Dynamic в розово',
+				categoryDescription : 'Тежестта не се поема от раменете и гърба'
 			}
 		]
+	},
+	{
+		id          : 3,
+		name        : 'Tris & Ton',
+		brandIcon   : {
+			brandQueryString : 'trisiton',
+			brandImageURL    : './static/images/brands/tris/logo',
+			brandImageAlt    : 'Tris&ton logo'
+		},
+		description :
+			'Испанската компания Tris & Ton е посветена на света на детето. Гамата продукти е изключително функционална, като същевременно вкарва нотка на закачка и забавление в света на малките. Това превръща продуктите на Tris & Ton и в чудесен подарък. Мисията на компанията е да създава висококачествени продукти, с иновативен и весел дизайн, в който са вложени много креативност и жизнерадостни цветове. Артистичните, но практични  аксесоари за колички позволяват на всеки родител да превърне „превозното средство” на мъничето си в уникат. Всички продукти на Tris & Ton са създадени и изработени в Испания от високотехнологични и качествени материали, и са преминали през всички необходими тестове за безопасност на ЕС.',
+		titleColor  : '#181713',
+		borderColor : '#EA3323',
+		imageBlock  : {
+			largeImage  : 'tris.jpg',
+			smallImage  : 'tris_small.jpg',
+			subheadline : 'Много настроение и положителни емоции',
+			content     :
+				'Продуктите на Tris & Ton се отличават с това, че създават много настроение и положителни емоции за родителите и техните деца.'
+		}
+	},
+	{
+		id          : 4,
+		name        : 'Luvion',
+		brandIcon   : {
+			brandQueryString : 'luvion',
+			brandImageURL    : './static/images/brands/luvion/logo',
+			brandImageAlt    : 'Tris&Luvion logo'
+		},
+		description :
+			'Luvion Premium Babyproducts е млада компания, която залага на дизайна и предлага отличаваща се гама техника и продукти за деца и детската стая. Философията на компанията е да разработва и произвежда висококачествени бебешки продукти, които отговарят на изискванията на съвременните родители. Всичко, което Luvion създава, е с мисъл за бебетата и техните родители. Luvion Premium Babyproducts е основана през 2005 година и оттогава се разраства бързо. Luvion е семейна фирма от град Делфт, Холандия и към настоящия момент нейните продукти се предлагат в 25 страни в целия свят. Luvion Premium Babyproducts се фокусират върху това клиентите им да са доволни от своя избор. Всеки новосъздаден продукт цели да представи нещо ново в своя сегмент. За Luvion качеството и дизайна са от особена важност и именно с това целят да се отличат от конкуренцията, тъй като вярват, че тези два компонента са ключови за удоволствието от употребата на даден продукт.',
+		titleColor  : '#09519d',
+		borderColor : '#ff4c4c',
+		imageBlock  : {
+			largeImage  : 'luvion.jpg',
+			smallImage  : 'luvion_sm.jpg',
+			subheadline : 'Функционалност и изчистен дизайн',
+			content     :
+				'Продуктите с марката Luvion се отличават със своята функционалност, изчистен дизайн, лесна употреба и високо качество.'
+		}
+	},
+	{
+		id          : 5,
+		name        : 'Twistshake',
+		brandIcon   : {
+			brandQueryString : 'twistshake',
+			brandImageURL    : './static/images/brands/twist/logo',
+			brandImageAlt    : 'Twistshake logo'
+		},
+		description :
+			'Бебешките шишета на шведската марка Twistshake са разработени от млади хора, които държат на практичното удобство, без да правят компромис с дизайна. Те оптимизират функционалността на обикновеното бебешко шише, като същевременно го превръщат от скучен и с нищо неотличаващ се предмет в актуален, ярък и цветен аксесоар, който позволява голямо съчетание от цветове, които най-добре да изразят вашата индивидуалност. Силиконовите биберони са с изключителна мекота и плътност, които максимално се доближават до естественото усещане. Същевременно с това,  шишетата и всички аксесоари към тях с изработени от най-висококачествени материали гарантиращи безвредност и дълга употреба. Включеният контейнер към бебешкото шише гарантира, че винаги имате точната доза мляко. Неговата решетка гарантира, че готовото мляко ще е без бучки. Широкият отвор гарантира удобство при пълнене и измиване. Качеството на използваните материали гарантира безопасност, а прекрасните ярки цветове гарантират настроение и индивидуалност. И че винаги ще бъдете забелязвани.',
+		titleColor  : '#333333',
+		borderColor : '#6f7071',
+		imageBlock  : {
+			largeImage  : 'twist.jpg',
+			smallImage  : 'twist_sm.jpg',
+			subheadline : 'Мобилни и красиви с Twistshake',
+			content     :
+				'Цялата гама продукти на Twistshake помага на съвременните родители да бъдат мобилни, улеснява приготвянето, храненето и измиването.'
+		}
+	},
+	{
+		id          : 6,
+		name        : 'Walking Mum',
+		brandIcon   : {
+			brandQueryString : 'walkingmum',
+			brandImageURL    : './static/images/brands/walk/logo',
+			brandImageAlt    : 'Walking Mum logo'
+		},
+		description :
+			'Испанската марка Pasito a Pasito (част от групата DISET S.A.) е на испанския пазар повече от 20 години и понастоящем е лидер в производството и продажбите на чанти за памперси и чувалчета за колички в Испания, като 30% от продукцията им се изнася. В отговор на все по-голямото търсене  на продукти с „по-европейски” вкус, през 2014 година е създадена марката WALKING MUM. Продуките на новата марка са по-динамични, ежедневни и практични. Моделите на WALKING MUM са вдъхновени от северно европейския дизайн, и са разработени съвместно с холандския клон на фирмата.',
+		titleColor  : '#716259',
+		borderColor : '#E4DFDF',
+		imageBlock  : {
+			largeImage  : 'walking_mum_l.jpg',
+			smallImage  : 'walking_mum_s.jpg',
+			subheadline : 'Изчистен и съвременен',
+			content     :
+				'Продуктите на WALKING MUM се отличават с усет към детайла и безкомпромисно качество на изработката и вложените материали, които са от най-ново поколение и са преминали всички тестове за безопасност на ЕС.'
+		}
 	}
 ]

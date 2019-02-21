@@ -1,13 +1,15 @@
 import React from 'react'
-import { Typography, withStyles } from '@material-ui/core'
+import { withStyles } from '@material-ui/core'
+import { MoreHoriz } from '@material-ui/icons'
 import Link from 'next/link'
+import { isAbsolute } from 'path'
 
 const BrandIcon = ({ classes, brandQueryString, brandImageURL, brandImageAlt }) => {
 	return (
 		<div className={classes.root}>
 			<Link href={`/brand?brand=${brandQueryString}`}>
 				<a className={classes.brand_icon_link}>
-					<picture>
+					<picture style={{ maxWidth: '400px' }}>
 						<source
 							srcSet={`${brandImageURL}-sm.webp 300w, ${brandImageURL}.webp 600w`}
 							type="image/webp"
@@ -20,6 +22,7 @@ const BrandIcon = ({ classes, brandQueryString, brandImageURL, brandImageAlt }) 
 						/>
 						<img src={`${brandImageURL}.jpg`} alt={brandImageAlt} className={classes.brand_icon_image} />
 					</picture>
+					<MoreHoriz className={classes.moreIcon} />
 				</a>
 			</Link>
 		</div>
@@ -28,9 +31,16 @@ const BrandIcon = ({ classes, brandQueryString, brandImageURL, brandImageAlt }) 
 
 const styles = (theme) => ({
 	root             : {
-		border    : '1px solid transparent',
-		'&:hover' : {
+		border                       : '1px solid #ddd',
+		justifySelf                  : 'center',
+		maxWidth                     : '400px',
+		[theme.breakpoints.up('md')]: {
 			borderColor : '#ddd'
+		},
+		'&:hover'                    : {
+			[theme.breakpoints.up('md')]: {
+				borderColor : '#ddd'
+			}
 		}
 	},
 	brand_icon_image : {
@@ -70,6 +80,19 @@ const styles = (theme) => ({
 				width  : '100%',
 				height : '100%'
 			}
+		}
+	},
+	moreIcon         : {
+		position                     : 'absolute',
+		fontSize                     : '22px',
+		// border                       : '1px solid #ddd',
+		// borderRadius                 : '50%',
+		color                        : '#565752',
+		bottom                       : '0.15em',
+		right                        : '0.15em',
+		[theme.breakpoints.up('md')]: {
+			bottom : '0.5em',
+			right  : '0.5em'
 		}
 	}
 })

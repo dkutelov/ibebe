@@ -43,12 +43,14 @@ const PrinceLionheart = ({ classes }) => {
 					)}
 				</Typography>
 			</div>
-			<div className={classes.categories}>
-				<Typography variant="h6" component="h2" className={classes.category_title}>
-					Видове продукти
-				</Typography>
-				<ProductCategories />
-			</div>
+			{brand.categories.length && (
+				<div className={classes.categories}>
+					<Typography variant="h6" component="h2" className={classes.category_title}>
+						Видове продукти
+					</Typography>
+					<ProductCategories />
+				</div>
+			)}
 		</div>
 	)
 }

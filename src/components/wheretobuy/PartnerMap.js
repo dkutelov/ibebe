@@ -22,7 +22,7 @@ const PartnerMap = ({ lat, lng, name }) => {
 	]
 	const zoom = 15
 	return (
-		<div style={{ height: '300px', width: '100%' }}>
+		<div className="map_container">
 			<GoogleMapReact
 				bootstrapURLKeys={{ key: 'AIzaSyAbBSz9ZdcjSHWP5g_2f6J3VnczJ1hz2ZY' }}
 				defaultCenter={center}
@@ -30,6 +30,19 @@ const PartnerMap = ({ lat, lng, name }) => {
 				<Marker lat={lat} lng={lng} />
 				<PartnerName lat={lat} lng={lng} name={name} />
 			</GoogleMapReact>
+			<style jsx>{`
+				.map_container {
+					height: 300px;
+					width: 100%;
+				}
+				@media only screen and (min-width: 600px) {
+					.map_container {
+						min-height: 300px;
+						height: 100%;
+						padding-left: 1em;
+					}
+				}
+			`}</style>
 		</div>
 	)
 }

@@ -42,9 +42,15 @@ class MyApp extends App {
 				</JssProvider>
 				<style global jsx>
 					{`
+						* {
+							margin: 0;
+							padding: 0;
+						}
 						body {
 							color: #413852;
 							margin: 0;
+							padding: 0;
+							box-sizing: border-box;
 						}
 					`}
 				</style>

@@ -23,7 +23,7 @@ const styles = (theme) => ({
 	wrapper           : {
 		width                        : '100%',
 		margin                       : '1em',
-		paddingTop                   : '2em',
+		padding                      : '2em 0',
 		[theme.breakpoints.up('md')]: {
 			width  : '80%',
 			margin : '0 auto'

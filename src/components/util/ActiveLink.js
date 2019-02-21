@@ -30,11 +30,14 @@ const baseLinkStyles = {
 	color          : '#762E61',
 	textTransform  : 'uppercase',
 	fontSize       : '1.1rem',
-
+	width          : '100%',
+	height         : '100%',
 	textDecoration : 'none',
 	margin         : 0,
 	padding        : '0 1.5em',
 	fontWeight     : '300',
+	display        : 'flex',
+	alignItems     : 'center',
 	'&:hover'      : {
 		color : '#26a9bf'
 	}

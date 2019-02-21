@@ -4,10 +4,13 @@ import { Picture } from 'react-responsive-picture'
 
 class About extends Component {
 	state = {
-		scrollPosY : 0
+		scrollPosY  : 0,
+		windowWidth : 0
 	}
 	componentDidMount () {
 		window.addEventListener('scroll', this.handleScrollPositionY)
+		const windowWidth = window.innerWidth
+		this.setState({ windowWidth })
 	}
 
 	componentWillUnmount () {
@@ -20,8 +23,14 @@ class About extends Component {
 	}
 
 	handleParralax = () => {
-		const { scrollPosY } = this.state
-		const parallaxPos = scrollPosY * -0.5
+		const { scrollPosY, windowWidth } = this.state
+		let parallaxPos
+		if ((windowWidth, 600)) {
+			parallaxPos = 0
+		}
+		else {
+			parallaxPos = scrollPosY * -0.5
+		}
 		const translateString = `translate3d(0, ${parallaxPos}px, 0)`
 		return { transform: translateString }
 	}
@@ -94,6 +103,8 @@ const styles = (theme) => ({
 	},
 	image           : {
 		width                        : '100%',
+		position                     : 'relative',
+		top                          : '-10px',
 		[theme.breakpoints.up('sm')]: {
 			position : 'fixed',
 			zIndex   : '-10'
@@ -115,7 +126,6 @@ const styles = (theme) => ({
 	content         : {
 		padding                      : '1em 1em 2em',
 		lineHeight                   : '1.3',
-		width                        : '100%',
 		color                        : '#ffffff',
 		fontSize                     : '1.4rem',
 		marginTop                    : '2em',
