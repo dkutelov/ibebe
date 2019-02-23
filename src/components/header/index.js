@@ -51,7 +51,7 @@ class Header extends Component {
 						<div
 							onClick={this.handleMenuOpen}
 							className={!smallHeader ? classes.menu_icon_wrapper : classes.menu_icon_wrapperSmall}>
-							<MenuIcon color="#26a9bf" size="39px" />
+							<MenuIcon color="#26a9bf" size="39px" menuOpened={menuOpened} />
 						</div>
 						<Link href="/">
 							<a>

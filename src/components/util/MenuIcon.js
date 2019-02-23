@@ -1,24 +1,13 @@
 import React, { Component } from 'react'
 
 class MenuIcon extends Component {
-	state = {
-		open : true
-	}
-
-	toggleOpen = () => {
-		this.setState((prevState) => ({
-			open : !prevState.open
-		}))
-	}
-
 	render () {
-		const { open } = this.state
-		const { size, color } = this.props
+		const { size, color, menuOpened } = this.props
 		return (
-			<div className={`menu_icon ${!open && 'menu_icon_close'}`} onClick={this.toggleOpen}>
-				<div className={`bar1 ${!open && 'bar1_close'}`} />
-				<div className={`bar2 ${!open && 'bar2_close'}`} />
-				<div className={`bar3 ${!open && 'bar3_close'}`} />
+			<div className={`menu_icon ${menuOpened && 'menu_icon_close'}`}>
+				<div className={`bar1 ${menuOpened && 'bar1_close'}`} />
+				<div className={`bar2 ${menuOpened && 'bar2_close'}`} />
+				<div className={`bar3 ${menuOpened && 'bar3_close'}`} />
 
 				<style global jsx>
 					{`

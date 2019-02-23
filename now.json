@@ -1,3 +1,7 @@
 {
-    "version": 1
+    "version": 1,
+    "env": {
+        "EMAIL_USER": "kgkbuk@gmail.com",
+        "EMAIL_PASSWORD": "r1@i5Za0s^1"
+    }
 }
