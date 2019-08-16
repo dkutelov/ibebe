@@ -11,6 +11,7 @@ const ActiveLink = ({ router, href, applyColorChange, children, classes }) => {
 	const handleClick = (event) => {
 		event.preventDefault()
 		router.push(href)
+		router.prefetch(href)
 	}
 
 	// asPath is the string if we use 'as' to rename the path

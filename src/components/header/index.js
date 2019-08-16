@@ -56,7 +56,7 @@ class Header extends Component {
 						<Link href="/">
 							<a>
 								<Picture
-									src={`static/images/logo-large.png 400w, static/images/logo-medium.png 300w, static/images/logo-small.png 200w`}
+									src={`https://res.cloudinary.com/dariku/image/upload/q_auto,f_auto,w_400/v1548513244/ibebe/logo-large.png 400w, https://res.cloudinary.com/dariku/image/upload/q_auto,f_auto,w_300/v1548513244/ibebe/logo-medium.png 300w, https://res.cloudinary.com/dariku/image/upload/q_auto,f_auto,w_200/v1548513244/ibebe/logo-small.png 200w`}
 									sizes="(min-width: 600px) 33vw, 15vw"
 									alt="лого на ibebe"
 									className={!smallHeader ? classes.logo : classes.logoSmall}
