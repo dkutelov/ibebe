@@ -22,3 +22,4 @@ yarn-error.log*
 
 #now env
 now.json
+out
